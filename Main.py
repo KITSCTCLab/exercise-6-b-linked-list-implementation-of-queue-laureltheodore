@@ -28,7 +28,8 @@ class Queue:
   self.rear<-None
 
   def status(self) -> None: 
-    # Write your code here                                           
+    # Write your code here     
+    
 
 
 # Do not change the following code
