@@ -27,7 +27,7 @@ class Queue:
   if self.front==None
   self.rear<-None
 
-  def status(self) -> None:
+  def status(self) -> None: 
     # Write your code here                                           
 
 
