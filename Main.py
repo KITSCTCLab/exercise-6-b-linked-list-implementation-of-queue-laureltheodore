@@ -20,6 +20,12 @@ class Queue:
 
   def dequeue(self) -> None:
     # Write your code here
+    if self.isempty()
+    return None
+  temp<-self.front
+  self.front<-temp.next
+  if self.front==None
+  self.rear<-None
 
   def status(self) -> None:
     # Write your code here
