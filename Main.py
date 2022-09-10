@@ -44,4 +44,4 @@ for i in range(len(operations)):
     queue.enqueue(int(data[i]))
   elif operations[i] == "dequeue": 
     queue.dequeue()
-queue.status()        
+queue.status()         
