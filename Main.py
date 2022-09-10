@@ -1,47 +1,46 @@
 class Node:
-  def __init__(self, data):
+  def _init_(self, data):
     self.data = data
     self.next = None
 
 
 class Queue:
-  def __init__(self):
+  def _init_(self):
     self.head = None
     self.last = None
 
   def enqueue(self, data) -> None:
-    # Write your code here
-    temp = Node(data)
-    if self.rear == None 
-    self.front<->self.rear<-temp
-    return true
-  self.rear.next<-temp
-  self.rear<-temp
+        new = Node(data)
+        if self.last is not None:
+            self.last.next = new
+        if self.head is None:
+            self.head = new
+        self.last = new
 
   def dequeue(self) -> None:
-    # Write your code here
-    if self.isempty()
-    return None
-  temp<-self.front
-  self.front<-temp.next
-  if self.front==None
-  self.rear<-None
+        if not self.head is None:
+            self.head = self.head.next
+            if self.head is None:
+              self.last = None
 
-  def status(self) -> None: 
-    # Write your code here        
-    
+  def status(self) -> None:
+        current = self.head
+        while current is not None:
+          print(current.data, end = "=>")
+          current = current.next
+        print("None")
 
 
 # Do not change the following code
 queue = Queue()
 operations = []
-for specific_operation in input().split(','):    
+for specific_operation in input().split(','):
     operations.append(specific_operation.strip())
 input_data = input()
 data = input_data.split(',')
 for i in range(len(operations)):
   if operations[i] == "enqueue":
     queue.enqueue(int(data[i]))
-  elif operations[i] == "dequeue": 
+  elif operations[i] == "dequeue":
     queue.dequeue()
-queue.status()         
+queue.status()
